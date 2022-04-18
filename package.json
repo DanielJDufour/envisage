@@ -1,0 +1,27 @@
+{
+  "name": "envisage",
+  "description": "Assign Environmental Variables to a JavaScript Object.",
+  "version": "0.0.0",
+  "main": "envisage.js",
+  "scripts": {
+    "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/envisage.git"
+  },
+  "keywords": [
+    "config",
+    "env"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/envisage/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/envisage#readme",
+  "devDependencies": {
+    "flug": "^2.2.0"
+  }  
+}
