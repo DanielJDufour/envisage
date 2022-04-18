@@ -1,5 +1,5 @@
 # envisage
-Assign Environmental Variables to a JavaScript Object.
+> Assign Environmental Variables to a JavaScript Object.
 
 # basic usage
 
@@ -7,13 +7,18 @@ Assign Environmental Variables to a JavaScript Object.
 // in webpack.config.js
 const evisage = require("envisage");
 
+const config = {
+  mode: "production",
+  // ...
+};
+
 envisage.assign({ target: config, prefix: "WEBPACK" });
 
 module.exports = config;
 ```
 
 ```bash
-WEBPACK_OUTPUT_FILENAME="library.min.js" webpack
+WEBPACK_OUTPUT_FILENAME="library.min.js" webpack --config webpack.config.js
 ```
 
 ### advanced usage
