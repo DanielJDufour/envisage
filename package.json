@@ -1,7 +1,7 @@
 {
   "name": "envisage",
   "description": "Assign Environmental Variables to a JavaScript Object.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./envisage.js",
   "files": [
     "envisage.js"
@@ -26,5 +26,5 @@
   "homepage": "https://github.com/DanielJDufour/envisage#readme",
   "devDependencies": {
     "flug": "^2.2.0"
-  }  
+  }
 }
