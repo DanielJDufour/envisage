@@ -2,7 +2,10 @@
   "name": "envisage",
   "description": "Assign Environmental Variables to a JavaScript Object.",
   "version": "0.0.0",
-  "main": "envisage.js",
+  "main": "./envisage.js",
+  "files": [
+    "envisage.js"
+  ],
   "scripts": {
     "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js",
     "test": "node test.js"
