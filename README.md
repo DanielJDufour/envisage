@@ -18,7 +18,7 @@ module.exports = config;
 ```
 
 ```bash
-WEBPACK_OUTPUT_FILENAME="library.min.js" webpack --config webpack.config.js
+WEBPACK_OUTPUT_FILENAME="library.min.js" WEBPACK_WATCH="true" webpack --config webpack.config.js
 ```
 
 ### advanced usage
@@ -35,6 +35,11 @@ envisage.assign({
   // default true
   // convert environmental variable name
   // to lowercase for target object key
-  lowercase: true 
+  lowercase: true,
+
+  // default true
+  // convert boolean string values "true" and "false"
+  // to Boolean types for target object value
+  convert_boolean: true
 });
 ```

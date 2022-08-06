@@ -50,6 +50,7 @@ test("webpack new path", ({ eq }) => {
 
 test("webpack from env", ({ eq }) => {
   process.env["WEBPACK_OUTPUT_FILENAME"] = "main.js";
+  process.env["WEBPACK_WATCH"] = "true";
 
   const config = {
     target: "web"
@@ -59,6 +60,7 @@ test("webpack from env", ({ eq }) => {
     prefix: "WEBPACK"
   });
   eq(result, {
+    watch: true,
     output: {
       filename: "main.js"
     },

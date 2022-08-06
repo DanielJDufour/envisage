@@ -1,5 +1,5 @@
 const envisage = {
-  assign: function ({ debug, env, lowercase, path_delimiter, prefix, target } = {}) {
+  assign: function ({ debug, convert_boolean = true, env, lowercase, path_delimiter, prefix, target } = {}) {
     if (typeof target !== "object") {
       throw new Error("[evisage] target object not provided");
     }
@@ -30,7 +30,11 @@ const envisage = {
         return;
       }
 
-      const value = env[key];
+      let value = env[key];
+
+      if (convert_boolean === true && ["true", "false"].includes(value)) {
+        value = Boolean(value);
+      }
 
       // remove prefix from key
       key = key.replace(new RegExp("^" + prefix + "_"), "");
