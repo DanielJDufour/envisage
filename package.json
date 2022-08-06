@@ -1,7 +1,7 @@
 {
   "name": "envisage",
   "description": "Assign Environmental Variables to a JavaScript Object.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./envisage.js",
   "files": [
     "envisage.js"
