@@ -1,5 +1,14 @@
 const envisage = {
-  assign: function ({ debug, convert_boolean = true, env, lowercase, path_delimiter, prefix, target } = {}) {
+  assign: function ({
+    debug,
+    convert_boolean = true,
+    convert_integer = true,
+    env,
+    lowercase,
+    path_delimiter,
+    prefix,
+    target
+  } = {}) {
     if (typeof target !== "object") {
       throw new Error("[evisage] target object not provided");
     }
@@ -34,6 +43,13 @@ const envisage = {
 
       if (convert_boolean === true && ["true", "false"].includes(value)) {
         value = Boolean(value);
+      }
+
+      if (convert_integer === true) {
+        const vstr = Number(value).toString();
+        if (value === vstr && vstr.indexOf(".") === -1) {
+          value = Number(value);
+        }
       }
 
       // remove prefix from key

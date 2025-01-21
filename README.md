@@ -40,6 +40,11 @@ envisage.assign({
   // default true
   // convert boolean string values "true" and "false"
   // to Boolean types for target object value
-  convert_boolean: true
+  convert_boolean: true,
+
+  // default true
+  // convert integer string values
+  // to Number types for target object value
+  convert_integer: true
 });
 ```

@@ -67,3 +67,24 @@ test("webpack from env", ({ eq }) => {
     target: "web"
   });
 });
+
+test("config port", ({ eq }) => {
+  process.env["CONFIG_SERVER_PORT"] = "5678";
+  process.env["CONFIG_SERVER_DECIMAL"] = "0.1";
+  const config = {
+    server: {
+      port: 1234,
+      decimal: "0.456"
+    }
+  };
+  const result = envisage.assign({
+    target: config,
+    prefix: "CONFIG"
+  });
+  eq(result, {
+    server: {
+      port: 5678,
+      decimal: "0.1"
+    }
+  });
+});

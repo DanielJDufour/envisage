@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/DanielJDufour/envisage#readme",
   "devDependencies": {
-    "flug": "^2.2.0"
+    "flug": "^2.8.2"
   }
 }
